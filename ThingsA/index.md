@@ -1,5 +1,5 @@
 ---
-title: ThingsA
+title: ThingsA Riverscapes Consortium
 weight: 1
 ---
 

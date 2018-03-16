@@ -69,6 +69,18 @@ header {
     font-family: 'Oswald', sans-serif;
     color: white;
     text-transform: uppercase;    
+
+    .RCLogo{
+      display: inline-block;
+      width: 19rem;
+      height: 5rem;
+      overflow: hidden;
+      background-image: url('../images/RC.png');
+      background-size: cover;
+      padding: 0;
+      color: transparent;
+      text-shadow: none;
+    }    
   }
   h3.subheader {
     color: #eeeeee;

@@ -121,18 +121,18 @@ $(document).ready(function (){
 		$topbarContainer.append($mobilediv)
 
 		var $topbar = $('<div class="top-bar" id="responsive-menu"></div>');
-		var $topbarleft = $('<div class="top-bar-left"></div>');
+		var $topbarleft = $('<div class="top-bar-left"><ul class="dropdown menu" data-dropdown-menu><li class="show-for-medium"><a id="topbarLogo" href="'+NAVHome+'/">'+NAVTitle+'</a></li></ul></div>')
+		var $topbarright = $('<div class="top-bar-right"></div>');
 		$topbar.append($topbarleft);
+		$topbar.append($topbarright);
 		
 		function menutraverse(t, first=false) {
 			// First time round
 			var $mUL = $('<ul class="submenu menu vertical" data-submenu></ul>');
 			if (first){
 				var $mUL = $('<ul class="dropdown menu" data-dropdown-menu></ul>');
-				var $title = $('<li class="show-for-medium"><a href="'+NAVHome+'/">'+NAVTitle+'</li>');
-				$mUL.append($title);
 			}
-		
+				
 			function urlize(item){
 				var newurl = "#";
 				var target = "";
@@ -166,11 +166,10 @@ $(document).ready(function (){
 					$mUL.append($mLi);
 				}
 			}
-
 			return $mUL;			
 		}
 
-		$topbarleft.append(menutraverse(tree, true));
+		$topbarright.append(menutraverse(tree, true));
 		$topbarContainer.append($topbar)
 		return $topbarContainer
 	}

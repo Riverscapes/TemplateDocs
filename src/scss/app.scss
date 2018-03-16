@@ -51,16 +51,22 @@ section {
 
 // The Header 
 header { 
+
   text-shadow: 3px 3px 3px rgba(0,0,0,0.7);
+  background-image: url('../images/HeaderBackground.png');
   background-repeat: no-repeat;
   background-position: 0% 50%;
   background-size: cover;
   background-color: #444444;
-  a { color: white; }
+
+  a { 
+    color: white;
+  }
   a:hover{ color: #eeeeee; }
   h1 {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 5rem;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
     color: white;
     text-transform: uppercase;    
   }
@@ -72,9 +78,10 @@ header {
     font-size: 1.2rem;
     color: #eeeeee;
   }
-  .callout { 
+  .callout.large { 
     background: transparent; 
     border: none;
+    padding: 3rem 3rem 4rem 3rem;
   }
   .callout.home { 
     padding: 6rem 3rem 9rem 3rem;
@@ -105,9 +112,27 @@ header {
     li.toc-h4 { padding-left: 3rem; font-size: 0.7rem; }
     li.toc-h5 { padding-left: 4rem; font-size: 0.6rem; }
 }
-#topbarnav a { color: white; }
+#topbarnav a { 
+  color: white; 
+}
 .top-bar {
-  &, & ul { background-color: #333333; }
+  #topbarLogo {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    background-image: url('../images/RiverscapesLogo.png');
+    background-size: cover;
+    padding: 0;
+    color: transparent;
+    text-shadow: none;
+  }
+  a {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &, ul {background-color: transparent;}
+  ul ul { background-color: black; }
   .menu .menu-text { color: white; }
   .dropdown.menu a { color: white; }
   .dropdown.menu>li.is-dropdown-submenu-parent>a::after{

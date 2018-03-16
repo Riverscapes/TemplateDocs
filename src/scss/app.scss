@@ -139,6 +139,13 @@ header {
 }
 
 #sidenav {
+  // hide the dumb menu if javascript hasn't died on the way to a menu
+  #sidenav #topmenu.hide{
+    display: none;
+  }
+  #sidenav #HTMLOnlyNav.hide{
+    display: none;
+  }
   display: block;
   padding: 1.25rem;   
   margin-bottom: 0.75rem;

@@ -27,7 +27,9 @@ $(document).ready(function (){
 				key = key.replace("_"," ").replace("%20", " ");
 				var newDir = null;
 
-				var thebranch = pointer.branches.filter(br => br.key == key)
+				var thebranch = pointer.branches.filter(function(br){
+					return br.key == key
+				})
 				if (thebranch.length > 0){
 					newDir = thebranch[0];
 				}
@@ -181,7 +183,7 @@ $(document).ready(function (){
 	function accordionize(t, $mUL) {
 		// The first time we have to build the ul
 		if (!$mUL) {
-			$mUL = $('<ul id="topmenu" class="vertical menu accordion-menu" data-accordion-menu data-submenu-toggle="true"></ul>');
+			$mUL = $('<ul id="topmenu" class="vertical menu accordion-menu hide" data-accordion-menu data-submenu-toggle="true"></ul>');
 			// If we've elected to have a home item then use it
 			try {
 				if (SiteSettings.sideMenu.homeItem === true){
@@ -250,12 +252,12 @@ $(document).ready(function (){
 	expandCurentAccordion($sidebarnav);
 
 	// Rewrite a few of the interactions with the menu3
-	$('#topmenu i.icon').click(e => {
+	$('#topmenu i.icon').click(function(e){
 			e.stopPropagation();
 			e.preventDefault();
 			$(e.toElement).parent().siblings('button').click();
 	})
-	$('#topmenu li.branch a.nolink').click(e => {
+	$('#topmenu li.branch a.nolink').click(function(e){
 		e.preventDefault();
 		$(e.toElement).siblings('button').click();
 })
@@ -275,4 +277,7 @@ $(document).ready(function (){
 	$('#toc').toc();
 	// $('#toc').prepend('<h4 class="show-for-medium"><span class="fa fa-file-text"></span> Page Contents:</h4>')
 
+	// Now turn off the dumb nav and turn on the smart one 
+	$('#sidenav #topmenu').removeClass('hide');
+	$('#sidenav #HTMLOnlyNav').addClass('hide');
 });

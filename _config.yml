@@ -51,8 +51,9 @@ settings:
   # ----------------------------------
   topmenu:
     - title: Home
-      url: ThingsA
       childern:
+        - title: Model Home
+          index
         - title: Riverscapes Home
           url: http://riverscapes.xyz
         - title: About

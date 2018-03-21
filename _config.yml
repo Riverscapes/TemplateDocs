@@ -53,7 +53,7 @@ settings:
     - title: Home
       childern:
         - title: Model Home
-          index
+          index.md
         - title: Riverscapes Home
           url: http://riverscapes.xyz
         - title: About

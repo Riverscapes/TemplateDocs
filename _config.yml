@@ -50,13 +50,13 @@ settings:
   # IF you don't need this just comment out everything below
   # ----------------------------------
   topmenu:
-    - title: Home
+    - title: "Home"
       childern:
         - title: "Model Home"
           url: index
         - title: "Riverscapes Home"
           url: http://riverscapes.xyz
-        - title: About
+        - title: "About"
           url: http://riverscapes.xyz/about.html
         - title: "Who We Are"
           url: http://riverscapes.xyz/who-we-are.html

@@ -50,17 +50,17 @@ settings:
   # IF you don't need this just comment out everything below
   # ----------------------------------
   topmenu:
-    - title: "Home"
+    - title: "Riverscapes"
       childern:
         - title: "Model Home"
           url: index
         - title: "Riverscapes Home"
           url: http://riverscapes.xyz
-        - title: "About"
+        - title: "About Riverscapes"
           url: http://riverscapes.xyz/about.html
         - title: "Who We Are"
           url: http://riverscapes.xyz/who-we-are.html
-        - title: News
+        - title: "News"
           url: http://riverscapes.xyz/news.html
     - title: "RC Tools"
      url: http://riverscapes.xyz/rc-tools.html

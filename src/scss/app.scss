@@ -22,6 +22,12 @@ body{
   background-color: white;
   #main{
     padding-bottom: 3rem;
+    img.float-left{
+      margin-right: 0.5rem;
+    }
+    img.float-right{
+      margin-left: 0.5rem;
+    }
   }
 }
 #footer {
@@ -331,4 +337,38 @@ code.highlighter-rouge {
 
 div.highlighter-rouge {
   margin-bottom: 1.5rem;
+}
+
+
+.demogrid{
+  .row{ 
+    position: relative;
+    &:before{
+      font-size: 10px;
+      background:blue;
+      color: white;
+      content: "ROW";
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    padding: 1rem 0;
+    border: 1px dashed #DDDDFF;
+  }
+  .columns{ 
+    position: relative;
+    &:before{
+      font-size: 10px;
+      font-family: monospace;
+      font-weight: bold;
+      background:red;
+      color: white;
+      content: "COL";
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    padding: 2rem 0;
+    border: 1px dashed #FFDDDD; 
+  }
 }

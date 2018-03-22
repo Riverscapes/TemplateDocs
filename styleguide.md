@@ -3,6 +3,18 @@ title: StyleGuide
 weight: 2
 ---
 
+# H1
+
+Never use H1 in the body. It's here for completeness
+
+## H2 is this
+
+### H3 is this
+
+#### H4 is this
+
+##### H5 is this
+
 ## Buttons
 
 ### Basic Buttons

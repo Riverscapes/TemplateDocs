@@ -1,8 +1,9 @@
 @charset 'utf-8';
 
 // Extra fonts we bring in form google
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=News+Cycle');
+@import url('https://fonts.googleapis.com/css?family=Oswald:700');
+
 
 // This grabs all our foundation settings
 @import 'settings';
@@ -13,14 +14,6 @@
 // content is. It's how we style the article content
 // without styling the header, menu etc.
 section {
-  h2 {
-    color: #333333;
-    font-family: 'Raleway', serif;
-    font-weight: 400;
-  }
-  h3{
-    border-bottom: 1px solid black;
-  }
 
   .imgleft{
     float: left;
@@ -64,9 +57,7 @@ header {
   }
   a:hover{ color: #eeeeee; }
   h1 {
-    font-size: 5rem;
-    font-weight: 700;
-    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
     color: white;
     text-transform: uppercase;    
 
@@ -106,9 +97,13 @@ header {
 
 }
 
+/**
+  Table of contents on the left side
+
+**/
 #toc {
     display: block;
-    padding: 1.25rem; 
+    padding: 0.75rem; 
     margin-bottom: 0.75rem;
     background-color: #fff;
     background: #eceeef;
@@ -121,9 +116,16 @@ header {
     li.toc-h1 { padding-left: 0rem; font-size: 1rem; }
     li.toc-h2 { padding-left: 1rem; font-size: 0.9rem; }
     li.toc-h3 { padding-left: 2rem; font-size: 0.8rem; }
-    li.toc-h4 { padding-left: 3rem; font-size: 0.7rem; }
-    li.toc-h5 { padding-left: 4rem; font-size: 0.6rem; }
+    li.toc-h4 { padding-left: 3rem; font-size: 0.8rem; }
+    li.toc-h5 { padding-left: 4rem; font-size: 0.8rem; }
+
 }
+
+
+/**
+  Topbar contents
+
+**/
 #topbarnav a { 
   color: white; 
 }
@@ -140,7 +142,9 @@ header {
   }
   a {
     color: white;
-    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.875rem; 
+    font-weight: 600;
     text-transform: uppercase;
   }
   &, ul {background-color: transparent;}
@@ -158,10 +162,23 @@ header {
   }
 }
 
+
+/**
+  SideBar styling
+
+**/
 #sidebar {
   .title-bar {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 300;
+    text-transform:uppercase;   
     background: $secondary-color;
     position: relative;
+
+    i.fa {
+      margin-right: 0.5rem;
+    }
   }
   #menuCtls {
     margin-bottom: 0;
@@ -171,6 +188,7 @@ header {
     span { border-bottom: none; }
     .button{
       padding: 0.45em 0.5em;
+      background-color: white;
     }  
   }  
 }
@@ -184,7 +202,7 @@ header {
     display: none;
   }
   display: block;
-  padding: 1.25rem;   
+  padding: 0.75rem;   
   margin-bottom: 0.75rem;
   background-color: #f5f5f5;
   border: 1px solid #e5e5e5;
@@ -195,6 +213,7 @@ header {
   li a {
     padding: 0.3rem 1rem 0.3rem 1rem;
     line-height: 1.2;
+ 
   }
   li>a:before{
     color: $primary-color;

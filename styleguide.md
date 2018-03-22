@@ -7,7 +7,7 @@ This page exists mainly for checking the CSS styles. All styles here are simply 
 
 # H1
 
-***NOTE: (Never EVER use H1 in the body. It's here for completeness)***gs
+***NOTE: (Never EVER use H1 in the body. It's here for completeness)***
 
 ## H2 is this
 

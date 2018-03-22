@@ -63,7 +63,7 @@ settings:
         - title: "News"
           url: http://riverscapes.xyz/news.html
     - title: "RC Tools"
-     url: http://riverscapes.xyz/rc-tools.html
+      url: http://riverscapes.xyz/rc-tools.html
     - title: "RC Science"
       url: http://riverscapes.xyz/rc-science.html
     - title: "RC Data"

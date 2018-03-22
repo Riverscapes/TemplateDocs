@@ -7,7 +7,7 @@ This page exists mainly for checking the CSS styles. All styles here are simply 
 
 # H1
 
-***NOTE: (Never EVER use H1 in the body. It's here for completeness)***
+***NOTE: (Never EVER use H1 in the body. It's here for completeness)***gs
 
 ## H2 is this
 
@@ -30,6 +30,16 @@ Sometimes you want an image to live on the left. Veniam deserunt do magna nisi s
 
 <img class="float-right" src="http://lorempixel.com/150/100/cats/4"> 
 Other times it belongs on the right. Veniam deserunt do magna nisi sunt ea quis aliqua aute cupidatat elit Lorem non. Dolore veniam deserunt nisi aute magna. Officia id dolor aliqua sunt dolor id cupidatat quis ea elit excepteur ea non. Aute sint aute in enim pariatur veniam ut. Ut Lorem anim occaecat aliquip quis irure ipsum elit do deserunt consequat aute cillum. Magna dolore sint adipisicing labore deserunt. Incididunt culpa laboris nisi Lorem excepteur.
+
+------------------------------------------
+
+## Embeds
+
+This is mainly for youtube videos. Just use the regular youtube embed code wrapped in a `responsive-embed` `div`
+
+<div class="responsive-embed widescreen">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rNSnfXl1ZjU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ------------------------------------------
 

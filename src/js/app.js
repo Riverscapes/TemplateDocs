@@ -117,7 +117,8 @@ $(document).ready(function (){
 		var $topbarright = $('<div class="top-bar-right"></div>');
 		$topbar.append($topbarleft);
 		
-		function menutraverse(t, first=false) {
+		function menutraverse(t, first) {
+			if (!first) first = false;
 			// First time round
 			var $mUL = $('<ul class="submenu menu vertical" data-submenu></ul>');
 			if (first){

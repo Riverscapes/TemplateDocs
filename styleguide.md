@@ -93,7 +93,7 @@ Sometimes you need tabular data:
 
 ### Buttons with Icons
 
-We use [font-awesome](https://fontawesome.com/) icon set for icons
+We use [font-awesome](https://fontawesome.com/v4.7.0/) icon set for icons
 
 <a class="button" href="#"><i class="fa fa-home"></i> 'home' icon </a>
 

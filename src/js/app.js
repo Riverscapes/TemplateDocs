@@ -226,8 +226,13 @@ function getUrlParameter(name) {
 	}
 
 
+	/**
+	 * The redirector only does its job if we have a valid query string
+	 * @param {*} appkey 
+	 */
 	function redirector(appkey){
-		if (APPREDIRECTS && APPREDIRECTS[appkey]){
+		var appkey = getUrlParameter("APPKEY");
+		if (appkey && appkey.length > 0 && APPREDIRECTS && APPREDIRECTS[appkey]){
 			window.location.replace(NAVHome + "/" + APPREDIRECTS[appkey]);
 		}
 	}
@@ -290,10 +295,7 @@ function getUrlParameter(name) {
 	// $('#toc').prepend('<h4 class="show-for-medium"><span class="fa fa-file-text"></span> Page Contents:</h4>')
 
 	// Redirect to the better 
-	var appkey = getUrlParameter("APPURL");
-	if (appkey && appkey.length > 0){
-		redirector(appkey);
-	}
+	redirector(appkey);	
 
 	// Now turn off the dumb nav and turn on the smart one 
 	$('#sidenav #topmenu').removeClass('hide');

@@ -190,6 +190,14 @@ $(document).ready(function (){
 		return $topbarContainer;
 	}
 
+// Extract the url parameter from the name you want
+function getUrlParameter(name) {
+	name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+	var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+	var results = regex.exec(location.search);
+	return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
+
 	/**
 	 * Turn a tree structure from treeize into a foundation sidebar accordion 
 	 * @param  {[type]}
@@ -233,6 +241,13 @@ $(document).ready(function (){
 			accordionize(br, $newmUl);
 		}
 		return $mUL;			
+	}
+
+
+	function redirector(appkey){
+		if (APPREDIRECTS && APPREDIRECTS[appkey]){
+			window.location.replace(NAVHome + "/" + APPREDIRECTS[appkey]);
+		}
 	}
 
 	/**
@@ -292,7 +307,15 @@ $(document).ready(function (){
 	$('#toc').toc();
 	// $('#toc').prepend('<h4 class="show-for-medium"><span class="fa fa-file-text"></span> Page Contents:</h4>')
 
+	// Redirect to the better 
+	var appkey = getUrlParameter("APPURL");
+	if (appkey && appkey.length > 0){
+		redirector(appkey);
+	}
+
 	// Now turn off the dumb nav and turn on the smart one 
 	$('#sidenav #topmenu').removeClass('hide');
 	$('#sidenav #HTMLOnlyNav').addClass('hide');
 });
+
+

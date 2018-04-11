@@ -18,7 +18,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "grunt",
-    "watch": "grunt watch &; cd ../; jekyll serve",
+    "watch": "grunt watch",
     "start": "cd ..; jekyll serve"
   },
   "repository": {

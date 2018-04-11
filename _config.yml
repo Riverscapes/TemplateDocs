@@ -70,3 +70,12 @@ settings:
       url: http://riverscapes.xyz/rc-data.html
     - title: "RC Help"
       url: http://riverscapes.xyz/rc-help.html
+
+# Redirecting from apps can be tricky so we use a key-value system
+# key: must be in the set [A-Za-z0-9_] (no spaces, no dashes)
+# url: must be relative url, no leading slash.
+AppRedirects:
+  - key: KEY1
+    url: ThingsA
+  - key: KEY2
+    url: ThingsB/subpageB.html

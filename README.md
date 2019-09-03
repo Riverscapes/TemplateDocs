@@ -1,3 +1,10 @@
+***NB: This repo has been depprecated in favour of <https://github.com/Riverscapes/riverscapes-jekyll-theme>***
+
+
+----------------------------------------------------------------
+
+
+
 # Site Template for Riverscapes Docs folders
 
 This is the main template for `/docs` folders in Riverscapes. Think of it as the central theme repository where bugs get fixed. 
